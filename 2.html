@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proposal</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #fbc2eb, #a18cd1);
+            color: #fff;
+            text-align: center;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin: 0;
+            animation: heartbeat 1.5s infinite;
+        }
+
+        p {
+            font-size: 1.2em;
+            margin: 20px 0;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 20px;
+        }
+
+        a, button {
+            text-decoration: none;
+            background: #7f7fd5;
+            padding: 15px 30px;
+            color: white;
+            font-size: 1.2em;
+            border-radius: 30px;
+            transition: background 0.3s;
+            box-shadow: 0 4px 10px rgba(127, 127, 213, 0.5);
+            border: none;
+            cursor: pointer;
+        }
+
+        a:hover, button:hover {
+            background: #86a8e7;
+        }
+
+        @keyframes heartbeat {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Will 🫵 Be Mine? ❤️</h1>
+    <p>You are my everything. Let’s start our journey together!</p>
+    <div class="buttons">
+        <button onclick="acceptProposal()">Yes, I Will 💖</button>
+        <button onclick="indirectYes()">No, But... 🤔</button>
+    </div>
+
+    <script>
+        function acceptProposal() {
+            alert("You said YES! 💕 Our forever begins now!");
+        }
+
+        function indirectYes() {
+            alert("You said NO... but deep down you know, you'll regret it! ❤️");
+            acceptProposal(); // Automatically triggers "Yes" after "No"
+        }
+    </script>
+</body>
+</html>
